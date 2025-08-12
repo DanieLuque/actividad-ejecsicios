@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativa CSS, Bootstrap y Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <h1 class="text-2xl font-bold mb-6 text-center">Cuadro comparativo: CSS Puro vs Bootstrap vs Tailwind</h1>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-300 bg-white rounded-lg shadow-lg">
+            <thead>
+                <tr class="bg-green-600 text-white">
+                    <th class="p-3 text-left">Framework / Método</th>
+                    <th class="p-3 text-left">Características</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-300 hover:bg-gray-50">
+                    <td class="p-3 font-semibold">CSS Puro</td>
+                    <td class="p-3">
+                        - No requiere librerías externas.<br>
+                        - Control total de estilos.<br>
+                        - Más código repetitivo y manual.
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-300 hover:bg-gray-50">
+                    <td class="p-3 font-semibold">Bootstrap</td>
+                    <td class="p-3">
+                        - Librería con clases prediseñadas.<br>
+                        - Rápido de implementar.<br>
+                        - Menos personalizable sin CSS adicional.
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="p-3 font-semibold">Tailwind CSS</td>
+                    <td class="p-3">
+                        - Usa clases utilitarias para construir estilos.<br>
+                        - Muy flexible y rápido.<br>
+                        - HTML más largo debido a muchas clases.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

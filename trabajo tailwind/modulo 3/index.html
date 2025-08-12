@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Componentes UI — Botones, Tarjetas y Formularios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-6">
+  <main class="max-w-6xl mx-auto">
+    <!-- NAV: menú responsive tipo hamburguesa -->
+    <nav class="mb-6">
+      <div class="flex items-center justify-between p-4 bg-white rounded-2xl shadow-sm">
+        <div class="flex items-center gap-3">
+          <div
+            class="h-10 w-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold hover:scale-105 transition-transform">
+            HG</div>
+          <span class="font-semibold">Burger Box</span>
+        </div>
+
+        <!-- botón hamburguesa (visible en mobile) -->
+        <div class="md:hidden">
+          <button aria-expanded="false" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+            class="p-2 rounded-lg hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- menú de escritorio -->
+        <ul class="hidden md:flex items-center gap-4 text-sm text-gray-600">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#" class="hover:underline">Productos</a></li>
+          <li><a href="#" class="hover:underline">Recursos</a></li>
+          <li><a href="#" class="hover:underline">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- menú mobile (toggle) -->
+      <div id="mobileMenu" class="hidden mt-3 md:hidden">
+        <div class="bg-white rounded-2xl shadow-sm p-4 space-y-2">
+          <a href="#"
+            class="btn px-3 py-2 hover:bg-slate-100 focus-visible:ring-4 focus-visible:ring-slate-100 active:scale-95 transition">Inicio</a>
+          <a href="#" class="block px-3 py-2 rounded hover:bg-slate-50">Productos</a>
+          <a href="#" class="block px-3 py-2 rounded hover:bg-slate-50">Recursos</a>
+          <a href="#" class="block px-3 py-2 rounded hover:bg-slate-50">Contacto</a>
+        </div>
+      </div>
+    </nav>
+    </section>
+    <!-- TARJETAS -->
+    <section class="mb-12">
+      <h2 class="flex justify-center font-semibold py-5 text-black hover:scale-125 transition ">Bienvenidos a nuestra pagina de
+        hamurguesas</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="card bg-white duration-500 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-3">
+          <img class="card-img w-full h-auto" src="./img/hamburguesa.jpg" alt="Imagen de ejemplo" />
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Hamburgusa doble</h3>
+            <p class="text-sm text-gray-600 mt-2">Descripción corta del producto. Incluye características breves y un
+              llamado a la acción.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-bold">$24.99</span>
+              <button
+                class="btn px-3 py-1.5 rounded-lg bg-sky-600 text-white text-sm hover:bg-sky-700 focus-visible:ring-4 focus-visible:ring-sky-300 transition">Comprar</button>
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card bg-white duration-500 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-3">
+          <img class="card-img w-full h-auto" src="./img/hamburguesa 1.jpg" />
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Hamburgusa simple</h3>
+            <p class="text-sm text-gray-600 mt-2">Una pequeña historia o extracto relacionado con el contexto
+              agropecuario o educativo.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs text-gray-500">2 días atrás</span>
+              <button
+                class="btn px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-sm hover:bg-slate-50 focus-visible:ring-4 focus-visible:ring-slate-200 transition">Leer</button>
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card bg-white duration-500 rounded-2xl shadow-sm overflow-hidden hover:-translate-y-3">
+          <img class="card-img w-full h-auto" src="./img/hamburguesa 2.jpg" alt="Imagen de ejemplo 3" />
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Hamburgusa vegana</h3>
+            <p class="text-sm text-gray-600 mt-2">Consejo corto con enlace para profundizar y mejorar prácticas en el
+              campo.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs text-gray-500">Etiqueta</span>
+              <button
+                class="btn px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-sm hover:bg-emerald-700 focus-visible:ring-4 focus-visible:ring-emerald-200 transition">Ver</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- FORMULARIOS -->
+    
+
+
+    <!-- SECCIONES CON GRADIENTES, SOMBRAS Y ANIMACIONES -->
+    <section class="mb-8 p-8 rounded-2xl shadow-lg bg-gradient-to-r from-green-100 to-emerald-300">
+      <h2 class="text-2xl font-bold">Producto 1</h2>
+      <p class="mt-2 text-sm text-white/90">productos para menores de edad
+      </p>
+      <div class="mt-4">
+        <button
+          class="btn inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-sky-600 font-semibold hover:scale-105 transition-transform">Explorar</button>
+        <span class="inline-block ml-3 animate-bounce">⬇️</span>
+      </div>
+    </section>
+    <section class="mb-8 p-8 rounded-2xl shadow-lg bg-gradient-to-r from-pink-400 to-purple-300">
+      <h2 class="text-2xl font-bold">Producto 2</h2>
+      <p class="mt-2 text-sm text-white/90">productos para mayores de edad
+      </p>
+      <div class="mt-4">
+        <button
+          class="btn inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-sky-600 font-semibold hover:scale-105 transition-transform">Explorar</button>
+        <span class="inline-block ml-3 animate-pulse"></span>
+      </div>
+    </section>
+    <section class="mb-8 p-8 rounded-2xl shadow-lg bg-gradient-to-r from-orange-400 to-red-300">
+      <h2 class="text-2xl font-bold">Producto 3</h2>
+      <p class="mt-2 text-sm text-white/90">productos para personas alergicas
+      </p>
+      <div class="mt-4">
+        <button
+          class="btn inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-sky-600 font-semibold hover:scale-105 transition-transform">Explorar</button>
+        <span class="inline-block ml-3 animate-bounce"></span>
+      </div>
+    </section>
+
+
+    <section class="mb-12 max-w-3xl">
+      <h2 class="text-xl font-semibold mb-4">Formularios estilizados</h2>
+      <form class="bg-white p-6 rounded-2xl shadow-sm max-w-3xl hover:shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Nombre -->
+          <label class="flex flex-col">
+            <span class="text-sm font-medium mb-1">Nombre</span>
+            <input type="text" name="nombre" placeholder="Juan Pérez"
+              class="px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 placeholder:text-slate-400" />
+          </label>
+          <!-- Email -->
+          <label class="flex flex-col">
+            <span class="text-sm font-medium mb-1">Correo</span>
+            <input type="email" name="email" placeholder="correo@ejemplo.com"
+              class="px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 placeholder:text-slate-400" />
+          </label>
+          <!-- Select -->
+          <label class="flex flex-col md:col-span-2">
+            <span class="text-sm font-medium mb-1">Tipo de consulta</span>
+            <div class="relative">
+              <select
+                class="appearance-none w-full px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 bg-white">
+                <option>General</option>
+                <option>Producto</option>
+                <option>Soporte</option>
+              </select>
+              <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">▾</span>
+            </div>
+          </label>
+          <!-- Textarea -->
+          <label class="flex flex-col md:col-span-2">
+            <span class="text-sm font-medium mb-1">Mensaje</span>
+            <textarea rows="4" placeholder="Escribe tu mensaje..."
+              class="px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 placeholder:text-slate-400"></textarea>
+          </label>
+          <!-- Checkbox / Radio -->
+          <div class="flex items-center gap-4 md:col-span-2">
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" />
+              <span class="text-sm">Deseo recibir novedades</span>
+            </label>
+            <label class="inline-flex items-center gap-2">
+              <input type="radio" name="prioridad" class="h-4 w-4 text-sky-600" checked />
+              <span class="text-sm">Prioridad alta</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex gap-3">
+            <button type="reset"
+              class="btn px-3 py-2 rounded-md border border-slate-200 bg-white hover:bg-slate-50">Limpiar</button>
+            <button id="submitBtn" type="submit"
+              class="btn px-4 py-2 rounded-md bg-sky-600 text-white hover:bg-sky-700 focus-visible:ring-4 focus-visible:ring-sky-300">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
